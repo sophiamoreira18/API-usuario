@@ -19,11 +19,11 @@ $errorMiddleware->setErrorHandler(HttpNotFoundException::class, function (Reques
  
 $app->get('/usuario', function (Request $request, Response $response, array $args) {
     $tarefas = [
-        ["id" => 1, "nome" => "leandro", "sobrenome" => "da silva", "senha" => "lele02"],
-        ["id" => 2, "nome" => "rodrigo", "sobrenome" => "silveira", "senha" => "rodrigo13"],
-        ["id" => 3, "nome" => "sophia", "sobrenome" => "moreira", "senha" => "sosolinda"],
-        ["id" => 4, "nome" => "amabili", "sobrenome" => "dos santos", "senha" => "luz04"],
-        ["id" => 5, "nome" => "luan", "sobrenome" => "pereira", "senha" => "binho123"],
+        ["id" => 1, "nome" => "leandro", "sobrenome" => "da silva", "login" => "leandro@gmail.com", "senha" => "lele02"],
+        ["id" => 2, "nome" => "rodrigo", "sobrenome" => "silveira","login" => "rodrigo@gmail.com",  "senha" => "rodrigo13"],
+        ["id" => 3, "nome" => "sophia", "sobrenome" => "moreira", "login" => "sophia@gmail.com",  "senha" => "sosolinda"],
+        ["id" => 4, "nome" => "amabili", "sobrenome" => "dos santos", "login" => "amabili@gmail.com",  "senha" => "luz04"],
+        ["id" => 5, "nome" => "luan", "sobrenome" => "pereira", "login" => "luan@gmail.com",  "senha" => "binho123"],
 
     ];
     $response->getBody()->write(json_encode($tarefas));
