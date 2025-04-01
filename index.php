@@ -37,6 +37,14 @@ $app->post('/usuario', function (Request $request, Response $response, array $ar
         $response->getBody()->write(json_encode([
             "mensagem" => "nome é obrigatório"
         ]));
+    
+        return $response->withHeader('Content-type', 'application/json')->withStatus(400);
+    }
+    if (!array_key_exists('senha', $parametros) || empty($parametros['senha'])) {
+        $response->getBody()->write(json_encode([
+            "mensagem" => "senha é obrigatório"
+        ]));
+    
         return $response->withHeader('Content-type', 'application/json')->withStatus(400);
     }
  
